@@ -70,31 +70,33 @@ getPlaces((places) => {
 // legend.addTo(map);
 
 // LEGEND TUTORIAL: http://ghost.mixedbredie.net/legendary-leaflet-legends/
+// http://leafletjs.com/examples/choropleth/
 
 function getColor(d) {
-	switch (d) {
-		case 'Action': return 'gold';
-		case 'Adventure': return 'crimson';
-		case 'Comedy': return 'springgreen';
+  switch (d) {
+    case 'Action': return 'gold';
+    case 'Comedy': return 'springgreen';
     case 'Crime': return 'dodgerblue';
-		case 'Drama': return 'plum';
-		case 'Fantasy': return 'seagreen';
+    case 'Drama': return 'plum';
+    case 'Fantasy': return 'seagreen';
     case 'Romance': return 'fuchsia';
-	}
+  }
 };
 
-var legend = L.control({position: 'bottomleft', collapsed: true});
+var legend = L.control({position: 'bottomleft'});
 
 legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend');
-    films = ['Action','Adventure','Comedy','Crime','Drama','Fantasy','Romance'];
+    films = ['Action','Comedy','Crime','Drama','Fantasy','Romance'];
 
   // loop through the categories values and generate a label with a circle for each value
 
   for (var i = 0; i < films.length; i++) {
-    div.innerHTML +=   '<i class="circle"' + getColor(films[i]) + '"></i> ' + (films[i] ? films[i] + '<br>' : '+');
+
+    div.innerHTML +=   '<i class="circle" style="background:' + getColor(films[i]) + '"></i> ' + (films[i] ? films[i] + '<br>' : '+');
   }
 	return div;
+
 };
 legend.addTo(map);
 
@@ -110,4 +112,3 @@ function getPlaces(callback) {
     callback(places);
   });
 }
-// create variable with jackhammer
