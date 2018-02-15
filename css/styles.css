@@ -33,6 +33,12 @@ h1 {
   width: 25%;
 }
 
+footer {
+  width: 25%;
+  position: fixed;
+  bottom: 10px;
+}
+
 .legend {
   font-family: 'Cutive Mono';
   font-size: 20px;
