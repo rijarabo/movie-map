@@ -7,15 +7,7 @@ body {
 }
 
 h1 {
-  font-family: 'Fredoka One';
-  float: left;
-}
-
-#camera{
-  width: 50px;
-  height: 50px;
-  filter: invert(100%);
-  top: 0;
+  font-family: 'Knewave', cursive;
   float: left;
 }
 
@@ -39,23 +31,4 @@ footer {
   bottom: 10px;
 }
 
-.legend {
-  font-family: 'Cutive Mono';
-  font-size: 20px;
-  text-align: left;
-  line-height: 18px;
-  color: white;
-}
-.legend i {
-  width: 18px;
-  height: 18px;
-  float: left;
-  margin-right: 8px;
-  opacity: 0.7;
-}
-.legend .circle {
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  margin-top: 8px;
 }
